@@ -1,8 +1,9 @@
-import pandas as pd 
-   
-df = pd.DataFrame() 
-print(df)
-# lst = ['Geeks', 'For', 'Geeks', 'is', 'portal', 'for', 'Geeks'] 
-  
-# df = pd.DataFrame(lst) 
-# print(df)
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from ECS 🚀"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
